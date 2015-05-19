@@ -39,41 +39,44 @@
 							<!-- SIDEBAR USER TITLE -->
 							<div class="profile-usertitle">
 								<div class="profile-usertitle-name">
-									 Marcus Doe
+									 张三
 								</div>
 								<div class="profile-usertitle-job">
-									 Developer
+									 销售经理
+								</div>
+								<div class="profile-usertitle-job">
+									 中国建设银行 四川省分行
 								</div>
 							</div>
 							<!-- END SIDEBAR USER TITLE -->
 							<!-- SIDEBAR BUTTONS -->
 							<div class="profile-userbuttons">
-								<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-								<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+								<button type="button" class="btn btn-circle green-haze btn-sm">关注</button>
+								<button type="button" class="btn btn-circle btn-danger btn-sm">信息</button>
 							</div>
 							<!-- END SIDEBAR BUTTONS -->
 							<!-- SIDEBAR MENU -->
 							<div class="profile-usermenu">
 								<ul class="nav">
-									<li>
-										<a href="extra_profile.html">
-										<i class="icon-home"></i>
-										Overview </a>
-									</li>
 									<li class="active">
-										<a href="extra_profile_account.html">
+										<a href="#">
+										<i class="icon-home"></i>
+										概述 </a>
+									</li>
+									<li>
+										<a href="customer/edit">
 										<i class="icon-settings"></i>
-										Account Settings </a>
+										帐户设置 </a>
 									</li>
 									<li>
-										<a href="page_todo.html" target="_blank">
+										<a href="customer/task" target="_blank">
 										<i class="icon-check"></i>
-										Tasks </a>
+										任务 </a>
 									</li>
 									<li>
-										<a href="extra_profile_help.html">
+										<a href="customer/help">
 										<i class="icon-info"></i>
-										Help </a>
+										帮助 </a>
 									</li>
 								</ul>
 							</div>
@@ -89,7 +92,7 @@
 										 37
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Projects
+										 已结算
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-6">
@@ -97,33 +100,33 @@
 										 51
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Tasks
+										 未结算
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-6">
 									<div class="uppercase profile-stat-title">
-										 61
+										 12
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Uploads
+										 申请中
 									</div>
 								</div>
 							</div>
 							<!-- END STAT -->
 							<div>
-								<h4 class="profile-desc-title">About Marcus Doe</h4>
-								<span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
+								<h4 class="profile-desc-title">关于 张三</h4>
+								<span class="profile-desc-text"> 中国建设银行 四川省分行销售经理 负责XX大区的XX销售事务. </span>
 								<div class="margin-top-20 profile-desc-link">
 									<i class="fa fa-globe"></i>
-									<a href="http://www.keenthemes.com">www.keenthemes.com</a>
+									<a href="http://www.cbpm.com">www.cbpc.com</a>
 								</div>
 								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-twitter"></i>
-									<a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
+									<i class="fa fa-weibo"></i>
+									<a href="http://www.weibo.com/realeve/">@realeve</a>
 								</div>
 								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-facebook"></i>
-									<a href="http://www.facebook.com/keenthemes/">keenthemes</a>
+									<i class="fa fa-qq"></i>
+									<a href="javascript:;">realeve@qq.com</a>
 								</div>
 							</div>
 						</div>
@@ -138,20 +141,20 @@
 									<div class="portlet-title tabbable-line">
 										<div class="caption caption-md">
 											<i class="icon-globe theme-font hide"></i>
-											<span class="caption-subject font-blue-madison bold uppercase">Profile Account</span>
+											<span class="caption-subject font-blue-madison bold uppercase">帐户资料</span>
 										</div>
 										<ul class="nav nav-tabs">
 											<li class="active">
-												<a href="#tab_1_1" data-toggle="tab">Personal Info</a>
+												<a href="#tab_1_1" data-toggle="tab">个人信息</a>
 											</li>
 											<li>
-												<a href="#tab_1_2" data-toggle="tab">Change Avatar</a>
+												<a href="#tab_1_2" data-toggle="tab">更换头像</a>
 											</li>
 											<li>
-												<a href="#tab_1_3" data-toggle="tab">Change Password</a>
+												<a href="#tab_1_3" data-toggle="tab">更改密码</a>
 											</li>
 											<li>
-												<a href="#tab_1_4" data-toggle="tab">Privacy Settings</a>
+												<a href="#tab_1_4" data-toggle="tab">权限设置</a>
 											</li>
 										</ul>
 									</div>
@@ -161,38 +164,38 @@
 											<div class="tab-pane active" id="tab_1_1">
 												<form role="form" action="#">
 													<div class="form-group">
-														<label class="control-label">First Name</label>
-														<input type="text" placeholder="John" class="form-control"/>
+														<label class="control-label">姓</label>
+														<input type="text" placeholder="王" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Last Name</label>
-														<input type="text" placeholder="Doe" class="form-control"/>
+														<label class="control-label">名</label>
+														<input type="text" placeholder="宝强" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Mobile Number</label>
-														<input type="text" placeholder="+1 646 580 DEMO (6284)" class="form-control"/>
+														<label class="control-label">移动电话</label>
+														<input type="text" placeholder="186-028-12345" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Interests</label>
-														<input type="text" placeholder="Design, Web etc." class="form-control"/>
+														<label class="control-label">工作电话</label>
+														<input type="text" placeholder="028-8275-0000" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Occupation</label>
-														<input type="text" placeholder="Web Developer" class="form-control"/>
+														<label class="control-label">职务</label>
+														<input type="text" placeholder="中国建设银行 四川省分行 销售经理" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">About</label>
-														<textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!"></textarea>
+														<label class="control-label">说明</label>
+														<textarea class="form-control" rows="3" placeholder="Don't forget your dreams!!!"></textarea>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Website Url</label>
-														<input type="text" placeholder="http://www.mywebsite.com" class="form-control"/>
+														<label class="control-label">网址</label>
+														<input type="text" placeholder="http://www.cbpc.com" class="form-control"/>
 													</div>
 													<div class="margiv-top-10">
 														<a href="javascript:;" class="btn green-haze">
-														Save Changes </a>
+														保存设置 </a>
 														<a href="javascript:;" class="btn default">
-														Cancel </a>
+														取消 </a>
 													</div>
 												</form>
 											</div>
@@ -200,38 +203,38 @@
 											<!-- CHANGE AVATAR TAB -->
 											<div class="tab-pane" id="tab_1_2">
 												<p>
-													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+													 只支持JPG、PNG、GIF，大小不超过5M.
 												</p>
 												<form action="#" role="form">
 													<div class="form-group">
 														<div class="fileinput fileinput-new" data-provides="fileinput">
 															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-																<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""/>
+																<img src="../../assets/admin/pages/media/profile/Avatar_none.gif" alt=""/>
 															</div>
 															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
 															</div>
 															<div>
 																<span class="btn default btn-file">
 																<span class="fileinput-new">
-																Select image </span>
+																选择图像 </span>
 																<span class="fileinput-exists">
-																Change </span>
+																更换图像 </span>
 																<input type="file" name="...">
 																</span>
 																<a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput">
-																Remove </a>
+																移除 </a>
 															</div>
 														</div>
 														<div class="clearfix margin-top-10">
-															<span class="label label-danger">NOTE! </span>
-															<span>Attached image thumbnail is supported in Latest Firefox, Chrome, Opera, Safari and Internet Explorer 10 only </span>
+															<span class="label label-danger">注意! </span>
+															<span style="padding-left:1em;">仅在最新版的 Firefox, Chrome, Opera, Safari and Internet Explorer 10 浏览器中支持缩略图显示功能 </span>
 														</div>
 													</div>
 													<div class="margin-top-10">
 														<a href="javascript:;" class="btn green-haze">
-														Submit </a>
+														提交 </a>
 														<a href="javascript:;" class="btn default">
-														Cancel </a>
+														取消 </a>
 													</div>
 												</form>
 											</div>
@@ -240,22 +243,22 @@
 											<div class="tab-pane" id="tab_1_3">
 												<form action="#">
 													<div class="form-group">
-														<label class="control-label">Current Password</label>
+														<label class="control-label">当前密码</label>
 														<input type="password" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">New Password</label>
+														<label class="control-label">新密码</label>
 														<input type="password" class="form-control"/>
 													</div>
 													<div class="form-group">
-														<label class="control-label">Re-type New Password</label>
+														<label class="control-label">重试新密码</label>
 														<input type="password" class="form-control"/>
 													</div>
 													<div class="margin-top-10">
 														<a href="javascript:;" class="btn green-haze">
-														Change Password </a>
+														更新密码 </a>
 														<a href="javascript:;" class="btn default">
-														Cancel </a>
+														取消 </a>
 													</div>
 												</form>
 											</div>
@@ -266,51 +269,51 @@
 													<table class="table table-light table-hover">
 													<tr>
 														<td>
-															 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus..
+															 描述1 ..
 														</td>
 														<td>
 															<label class="uniform-inline">
 															<input type="radio" name="optionsRadios1" value="option1"/>
-															Yes </label>
+															是 </label>
 															<label class="uniform-inline">
 															<input type="radio" name="optionsRadios1" value="option2" checked/>
-															No </label>
+															否 </label>
 														</td>
 													</tr>
 													<tr>
 														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+															 描述2
 														</td>
 														<td>
 															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
+															<input type="checkbox" value=""/> 是 </label>
 														</td>
 													</tr>
 													<tr>
 														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+															 描述3
 														</td>
 														<td>
 															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
+															<input type="checkbox" value=""/> 是 </label>
 														</td>
 													</tr>
 													<tr>
 														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
+															 描述4
 														</td>
 														<td>
 															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
+															<input type="checkbox" value=""/> 是 </label>
 														</td>
 													</tr>
 													</table>
 													<!--end profile-settings-->
 													<div class="margin-top-10">
 														<a href="javascript:;" class="btn green-haze">
-														Save Changes </a>
+														更新设置 </a>
 														<a href="javascript:;" class="btn default">
-														Cancel </a>
+														取消 </a>
 													</div>
 												</form>
 											</div>

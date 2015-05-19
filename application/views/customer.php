@@ -39,41 +39,44 @@
 							<!-- SIDEBAR USER TITLE -->
 							<div class="profile-usertitle">
 								<div class="profile-usertitle-name">
-									 Marcus Doe
+									 张三
 								</div>
 								<div class="profile-usertitle-job">
-									 Developer
+									 销售经理
+								</div>
+								<div class="profile-usertitle-job">
+									 中国建设银行 四川省分行
 								</div>
 							</div>
 							<!-- END SIDEBAR USER TITLE -->
 							<!-- SIDEBAR BUTTONS -->
 							<div class="profile-userbuttons">
-								<button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
-								<button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
+								<button type="button" class="btn btn-circle green-haze btn-sm">关注</button>
+								<button type="button" class="btn btn-circle btn-danger btn-sm">信息</button>
 							</div>
 							<!-- END SIDEBAR BUTTONS -->
 							<!-- SIDEBAR MENU -->
 							<div class="profile-usermenu">
 								<ul class="nav">
 									<li class="active">
-										<a href="extra_profile.html">
+										<a href="#">
 										<i class="icon-home"></i>
-										Overview </a>
+										概述 </a>
 									</li>
 									<li>
-										<a href="extra_profile_account.html">
+										<a href="customer/edit">
 										<i class="icon-settings"></i>
-										Account Settings </a>
+										帐户设置 </a>
 									</li>
 									<li>
-										<a href="page_todo.html" target="_blank">
+										<a href="customer/task" target="_blank">
 										<i class="icon-check"></i>
-										Tasks </a>
+										任务 </a>
 									</li>
 									<li>
-										<a href="extra_profile_help.html">
+										<a href="customer/help">
 										<i class="icon-info"></i>
-										Help </a>
+										帮助 </a>
 									</li>
 								</ul>
 							</div>
@@ -89,7 +92,7 @@
 										 37
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Projects
+										 已结算
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-6">
@@ -97,33 +100,33 @@
 										 51
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Tasks
+										 未结算
 									</div>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-6">
 									<div class="uppercase profile-stat-title">
-										 61
+										 12
 									</div>
 									<div class="uppercase profile-stat-text">
-										 Uploads
+										 申请中
 									</div>
 								</div>
 							</div>
 							<!-- END STAT -->
 							<div>
-								<h4 class="profile-desc-title">About Marcus Doe</h4>
-								<span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
+								<h4 class="profile-desc-title">关于 张三</h4>
+								<span class="profile-desc-text"> 中国建设银行 四川省分行销售经理 负责XX大区的XX销售事务. </span>
 								<div class="margin-top-20 profile-desc-link">
 									<i class="fa fa-globe"></i>
-									<a href="http://www.keenthemes.com">www.keenthemes.com</a>
+									<a href="http://www.cbpm.com">www.cbpc.com</a>
 								</div>
 								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-twitter"></i>
-									<a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
+									<i class="fa fa-weibo"></i>
+									<a href="http://www.weibo.com/realeve/">@realeve</a>
 								</div>
 								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-facebook"></i>
-									<a href="http://www.facebook.com/keenthemes/">keenthemes</a>
+									<i class="fa fa-qq"></i>
+									<a href="javascript:;">realeve@qq.com</a>
 								</div>
 							</div>
 						</div>
@@ -139,17 +142,17 @@
 									<div class="portlet-title">
 										<div class="caption caption-md">
 											<i class="icon-bar-chart theme-font hide"></i>
-											<span class="caption-subject font-blue-madison bold uppercase">Your Activity</span>
-											<span class="caption-helper hide">weekly stats...</span>
+											<span class="caption-subject font-blue-madison bold uppercase">近期活动</span>
+											<span class="caption-helper hide">周期...</span>
 										</div>
 										<div class="actions">
 											<div class="btn-group btn-group-devided" data-toggle="buttons">
 												<label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
-												<input type="radio" name="options" class="toggle" id="option1">Today</label>
+												<input type="radio" name="options" class="toggle" id="option1">今日</label>
 												<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
-												<input type="radio" name="options" class="toggle" id="option2">Week</label>
+												<input type="radio" name="options" class="toggle" id="option2">本周</label>
 												<label class="btn btn-transparent grey-salsa btn-circle btn-sm">
-												<input type="radio" name="options" class="toggle" id="option2">Month</label>
+												<input type="radio" name="options" class="toggle" id="option2">本月</label>
 											</div>
 										</div>
 									</div>
@@ -163,7 +166,7 @@
 													</div>
 													<div class="stat-number">
 														<div class="title">
-															 Total
+															 总销售量
 														</div>
 														<div class="number">
 															 2460
@@ -179,7 +182,7 @@
 													</div>
 													<div class="stat-number">
 														<div class="title">
-															 New
+															 新增
 														</div>
 														<div class="number">
 															 719
@@ -193,19 +196,19 @@
 											<thead>
 											<tr class="uppercase">
 												<th colspan="2">
-													 MEMBER
+													 成员
 												</th>
 												<th>
-													 Earnings
+													 营业额
 												</th>
 												<th>
-													 CASES
+													 销售中
 												</th>
 												<th>
-													 CLOSED
+													 已完成
 												</th>
 												<th>
-													 RATE
+													 完成率
 												</th>
 											</tr>
 											</thead>
@@ -214,10 +217,10 @@
 													<img class="user-pic" src="../../assets/admin/layout3/img/avatar4.jpg">
 												</td>
 												<td>
-													<a href="javascript:;" class="primary-link">Brain</a>
+													<a href="javascript:;" class="primary-link">张一</a>
 												</td>
 												<td>
-													 $345
+													 ￥2345
 												</td>
 												<td>
 													 45
@@ -234,10 +237,10 @@
 													<img class="user-pic" src="../../assets/admin/layout3/img/avatar5.jpg">
 												</td>
 												<td>
-													<a href="javascript:;" class="primary-link">Nick</a>
+													<a href="javascript:;" class="primary-link">张二</a>
 												</td>
 												<td>
-													 $560
+													 ￥2560
 												</td>
 												<td>
 													 12
@@ -254,10 +257,10 @@
 													<img class="user-pic" src="../../assets/admin/layout3/img/avatar6.jpg">
 												</td>
 												<td>
-													<a href="javascript:;" class="primary-link">Tim</a>
+													<a href="javascript:;" class="primary-link">张四</a>
 												</td>
 												<td>
-													 $1,345
+													 ￥21,345
 												</td>
 												<td>
 													 450
@@ -274,10 +277,10 @@
 													<img class="user-pic" src="../../assets/admin/layout3/img/avatar7.jpg">
 												</td>
 												<td>
-													<a href="javascript:;" class="primary-link">Tom</a>
+													<a href="javascript:;" class="primary-link">张五</a>
 												</td>
 												<td>
-													 $645
+													 ￥2645
 												</td>
 												<td>
 													 50
@@ -301,16 +304,16 @@
 									<div class="portlet-title tabbable-line">
 										<div class="caption caption-md">
 											<i class="icon-globe theme-font hide"></i>
-											<span class="caption-subject font-blue-madison bold uppercase">Feeds</span>
+											<span class="caption-subject font-blue-madison bold uppercase">消息</span>
 										</div>
 										<ul class="nav nav-tabs">
 											<li class="active">
 												<a href="#tab_1_1" data-toggle="tab">
-												System </a>
+												系统 </a>
 											</li>
 											<li>
 												<a href="#tab_1_2" data-toggle="tab">
-												Activities </a>
+												其它 </a>
 											</li>
 										</ul>
 									</div>
@@ -330,8 +333,8 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 You have 4 pending tasks. <span class="label label-sm label-info">
-																			Take action <i class="fa fa-share"></i>
+																			 你有4笔订单需结算. <span class="label label-sm label-info">
+																			处理 <i class="fa fa-share"></i>
 																			</span>
 																		</div>
 																	</div>
@@ -339,7 +342,7 @@
 															</div>
 															<div class="col2">
 																<div class="date">
-																	 Just now
+																	 刚刚
 																</div>
 															</div>
 														</li>
@@ -354,14 +357,14 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 New version v1.4 just lunched!
+																			 销售系统V1.4已发布!
 																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="col2">
 																<div class="date">
-																	 20 mins
+																	 20 分钟前
 																</div>
 															</div>
 															</a>
@@ -376,14 +379,14 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 Database server #12 overloaded. Please fix the issue.
+																			 您所提交的订单23553#已通过申请.
 																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="col2">
 																<div class="date">
-																	 24 mins
+																	 24 分钟前
 																</div>
 															</div>
 														</li>
@@ -397,14 +400,14 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 New order received and pending for process.
+																			 您有2笔订单需确认收货.
 																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="col2">
 																<div class="date">
-																	 30 mins
+																	 30 分钟前
 																</div>
 															</div>
 														</li>
@@ -418,14 +421,14 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 New payment refund and pending approval.
+																			 “金玉满堂(25件)”由于缺货，需重新确认.
 																		</div>
 																	</div>
 																</div>
 															</div>
 															<div class="col2">
 																<div class="date">
-																	 40 mins
+																	 40 分钟前
 																</div>
 															</div>
 														</li>
@@ -439,7 +442,7 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 New member registered. Pending approval.
+																			 信息1.
 																		</div>
 																	</div>
 																</div>
@@ -460,8 +463,8 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 Web server hardware needs to be upgraded. <span class="label label-sm label-default ">
-																			Overdue </span>
+																			 信息2 <span class="label label-sm label-default ">
+																			忽略 </span>
 																		</div>
 																	</div>
 																</div>
@@ -482,7 +485,7 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 Prod01 database server is overloaded 90%.
+																			 信息3.
 																		</div>
 																	</div>
 																</div>
@@ -503,7 +506,7 @@
 																	</div>
 																	<div class="cont-col2">
 																		<div class="desc">
-																			 New group created. Pending manager review.
+																			 信息4.
 																		</div>
 																	</div>
 																</div>
