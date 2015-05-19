@@ -1,16 +1,22 @@
 /*------------------------------------版本说明---------------------------------------*/
 /*2015-05-19 
-	+TABLE		gw_group							分组表
+	+TABLE		gw_group							    分组表
 	+TABLE		gw_user_group							用户分组表
 	+FIELD		gw_customer			reg_capital			注册资本
 	+FIELD		gw_customer			corporate			法人代表
 	+FIELD		gw_customer			contact				联系人
 	+FIELD		gw_customer			contact_tel			联系电话
+	+FIELD		gw_order			order_principal		订单负责人
+	+FIELD		gw_order_goods		discount			单品折扣
 	+FIELD		gw_price			add_time			添加时间
 	+FIELD		gw_price			add_user			添加人员
+	+FIELD		gw_price			goods_premium		溢价
 	*FIELD		gw_price			goods_price			定价
+    -FIELD      gw_goods            goods_number        商品数量， 通过库存表来进行说明
 
 /*2015-05-19
+    +TABLE      gw_stock                                库存表
+    +TABLE      gw_stock_detail                         库存明细表
 	
 /*------------------------------------版本说明 end---------------------------------------*/
 #创建数据库
@@ -176,6 +182,7 @@ CREATE TABLE IF NOT	EXISTS gw_stock_detail(
 	rec_id int unsigned not null auto_increment primary key comment '记录编号',
 	goods_id int unsigned not null default 0 comment '商品ID',
 	goods_num int unsigned not null default 0 comment '商品数量',
+    user_id int unsigned not null default 0 comment '用户ID',
 	add_time int unsigned not null default 0 comment '添加时间'
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='库存明细表';
 
