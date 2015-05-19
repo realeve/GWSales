@@ -22,6 +22,7 @@
 <script src="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <script src="../../assets/admin/pages/controller/CommonFunctions.js"></script>
 <script src="../../assets/admin/pages/scripts/profile.js" type="text/javascript"></script>
+<script src="../../assets/admin/pages/controller/MicroBlog.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <script>
@@ -33,7 +34,7 @@ jQuery(document).ready(function() {
 	Demo.init(); // init demo features
 	$("#today").text('<?php echo today(5);?>');
 	initDashboardDaterange('YYYY-MM-DD');   
-		
+	ReadLogSettings();	
 	//客户浏览
 	Profile.init(); // init page demo
 });

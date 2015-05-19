@@ -14,7 +14,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?php echo base_url()?>product">信息浏览</a>
+						<a href="<?php echo base_url()?>customer">信息浏览</a>
 					</li>
 				</ul>
 				<div class="page-toolbar">

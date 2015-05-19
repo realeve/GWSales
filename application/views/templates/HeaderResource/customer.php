@@ -10,6 +10,7 @@
 <link href="../../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css"/>
 <link href="../../assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
 <link href="../../assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo base_url()?>assets/admin/pages/css/timeline.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE LEVEL STYLES -->
 
 <!-- BEGIN THEME STYLES -->

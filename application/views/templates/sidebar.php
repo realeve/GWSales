@@ -106,6 +106,11 @@
                                 <i class="icon-note"></i>
                                 <span class="badge badge-roundless badge-danger">new</span>信息维护</a>
                         </li>
+						<li>
+                            <a href="<?php echo base_url()?>customer/blog">
+                                <i class="icon-note"></i>
+                                <span class="badge badge-roundless badge-danger">new</span>工作笔记</a>
+                        </li>
                     </ul>
                 </li>
                 <li>
