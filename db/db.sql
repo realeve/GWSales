@@ -181,7 +181,7 @@ CREATE TABLE IF NOT	EXISTS gw_stock(
 CREATE TABLE IF NOT	EXISTS gw_stock_detail(
 	rec_id int unsigned not null auto_increment primary key comment '记录编号',
 	goods_id int unsigned not null default 0 comment '商品ID',
-	goods_num int unsigned not null default 0 comment '商品数量',
+	goods_num int not null default 0 comment '商品数量(+为入，-为出)',
     user_id int unsigned not null default 0 comment '用户ID',
 	add_time int unsigned not null default 0 comment '添加时间'
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='库存明细表';
