@@ -5,8 +5,7 @@ class Login extends CI_Controller {
   {
     parent::__construct();
 	$this->load->helper ( array (
-		'form',
-		'url' 
+		'form'
 	) );
 	$this->load->library('session');
     $this->load->model('LoginModel');
@@ -84,7 +83,7 @@ class Login extends CI_Controller {
 		'FullName' => $this->input->post('fullname'),
 		'Email' => $this->input->post('email'),
 		'Phone' => $this->input->post('phone'),
-		'DepartMent' => $this->input->post('department'),
+		'DepartMent' => $this->input->post('role'),
 		'regIPAdress' => $this->input->ip_address(),
 		'UserRole' => 0,
 		'regTime' =>  date("Y-m-d H:i:s")

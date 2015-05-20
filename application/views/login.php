@@ -8,7 +8,7 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8"/>
-<title>质量控制中心 | 登录 - 系统登录</title>
+<title>长城销售系统 | 登录 - 系统登录</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -122,18 +122,14 @@
 			<input class="form-control placeholder-no-fix" type="text" placeholder="办公电话" name="phone"/>
 		</div>
 		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">所在部门</label>
-			<select name="department" class="form-control">
-				<option value="">所在部门</option>				
-				<option value="JZ">技术质量部</option>
-				<option value="SC">生产管理部</option>
-				<option value="QG">企管信息部</option>
-				<option value="CZ">钞纸制作部</option>
-				<option value="CP">钞纸成品制作部</option>
-				<option value="JW">胶凹制作部</option>
-				<option value="YM">印码制作部</option>
-				<option value="JF">检封制作部</option>
-				<option value="SG">数字管理部</option>
+			<label class="control-label visible-ie8 visible-ie9">所属角色</label>
+			<select name="role" class="form-control">
+				<option value="">所属角色</option>				
+				<option value="YX">营销员</option>
+				<option value="KG">库管员</option>
+				<option value="FH">发货员</option>
+				<option value="SP">审批者</option>
+				<option value="JS">结算员</option>
 			</select>
 		</div>
 		<p class="hint">
@@ -169,7 +165,7 @@
 	<!-- END REGISTRATION FORM -->
 </div>
 <div class="copyright">
-	 2015 &copy; 成都印钞有限公司 . 技术质量部.
+	 2015 &copy; 中钞长城贵金属有限公司
 </div>
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->

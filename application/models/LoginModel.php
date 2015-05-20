@@ -1,11 +1,6 @@
 <?php
 class LoginModel extends CI_Model {
 
-	public function __construct()
-	{
-		$this->load->database();
-	}
-
 	public function TransToGBK($data){//SQL SERVER字符转换
 		$data['UserName'] = iconv("utf-8","gbk",$data['UserName']);
 		$data['FullName'] = iconv("utf-8","gbk",$data['FullName']);
@@ -43,7 +38,6 @@ class LoginModel extends CI_Model {
 
 	public function ResetPassword($ResetData)
 	{
-		$this->load->helper('url');
 		$ResetData['UserName'] = iconv("utf-8","gbk",$ResetData['UserName']);
 		$data = array(
 			'UserPassword' => md5($this->input->post('password'))
@@ -70,7 +64,6 @@ class LoginModel extends CI_Model {
 
 	public function UserRegistry($RegisterData)
 	{
-	 	$this->load->helper('url');
 	  	$data = $this ->TransToGBK($RegisterData);
 	  	//判断用户名是否已存在
 		$LOGINDB=$this->load->database('sqlsvr',TRUE);		
