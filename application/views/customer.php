@@ -59,12 +59,12 @@
 							<div class="profile-usermenu">
 								<ul class="nav">
 									<li class="active">
-										<a href="#">
+										<a href="javascript:;">
 										<i class="icon-home"></i>
 										概述 </a>
 									</li>
 									<li>
-										<a href="customer/edit">
+										<a href="edit">
 										<i class="icon-settings"></i>
 										帐户设置 </a>
 									</li>

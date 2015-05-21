@@ -14,7 +14,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?php echo base_url()?>product">信息编辑</a>
+						<a href="javascript:;">信息编辑</a>
 					</li>
 				</ul>
 				<div class="page-toolbar">
@@ -59,12 +59,12 @@
 							<div class="profile-usermenu">
 								<ul class="nav">
 									<li class="active">
-										<a href="#">
+										<a href="./">
 										<i class="icon-home"></i>
 										概述 </a>
 									</li>
 									<li>
-										<a href="customer/edit">
+										<a href="javascript:;">
 										<i class="icon-settings"></i>
 										帐户设置 </a>
 									</li>
