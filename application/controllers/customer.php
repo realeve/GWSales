@@ -85,9 +85,13 @@ class customer extends CI_Controller {
 	
 	public function blog()
 	{			
-		//debug mode
-		userdata('userrole') = 9;
-		userdata('username') = 'libin';		
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);	
+		
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//ต๗สิ
