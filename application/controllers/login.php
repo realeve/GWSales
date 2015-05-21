@@ -4,16 +4,18 @@ class Login extends CI_Controller {
   public function __construct()
   {
     parent::__construct();
-	$this->load->helper ( array (
-		'form'
-	) );
-	$this->load->library('session');
     $this->load->model('LoginModel');
   }
 
 
   public function index(){
-  	//$this->output->set_output(json_encode($this->session->userdata));//调试
+	//debug mode
+	$logindata = array(
+			   'username'  => 'libin',
+			   'userrole'     => '9',
+			   'logged_in' => TRUE
+		   );
+	$this->session->set_userdata($logindata);
 	if ( $this->session->userdata('userrole')>0 )
 	{
 		$logindata['logged_in'] = true;		
@@ -42,25 +44,24 @@ class Login extends CI_Controller {
   //登录
   public function trylogin(){
 	$UserName = $this->input->post('username');
-	$Password = md5($this->input->post('password'));
-
+	$Password = md5($this->input->post('password'));	
+	
 	if($this->session->userdata('userrole')==-1 && $this->session->userdata('logged_in') == true && $this->session->userdata('username')!='')//如果注销
 	{
 		$this->load->view('framework/lockscreen');
 	}
-
 	$logindata = $this->LoginModel->logincheck($UserName,$Password);
+	
 	if ($logindata['logged_in'] == true) {
 		if ($logindata['userrole'] >0) {//帐号激活
 			$this->session->set_userdata($logindata);
-
 			$this->load->view('templates/header', $logindata);  
 			$this->load->view('templates/sidebar');
 			$this->load->view('welcome',$logindata);
 			$this->load->view('templates/footer');
 		}
 		else//未激活
-		{
+		{			
 			$logindata['message'] = $this->loginMessage(6);//未激活
 			$this->load->view('login', $logindata);
 		}
@@ -68,7 +69,6 @@ class Login extends CI_Controller {
 	}
 	else
 	{
-		//$this->output->set_output(json_encode($logindata));
 		$logindata['message'] = $this->loginMessage($logindata['message']);
 		$this->load->view('login', $logindata);
 	}

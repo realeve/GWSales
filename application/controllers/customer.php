@@ -5,19 +5,19 @@ class customer extends CI_Controller {
 	public function __construct()
 	{
 	  	parent::__construct();
-		$this->load->helper ( array (
-			'form',
-			'url' 
-		) );
-		$this->load->library('session');
 		$this->load->model('CustomerModel');
 	}
 	public function index()
 	{
+		//debug mode
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);	
 		if ($this->session->userdata('userrole')>0)
 		{
-			//$this->output->set_output($logindata);//调试
-			//$this->session->sess_destroy();//注销
 			if($this->session->userdata('logged_in')==true)
 			{
 				$logindata['logged_in'] = true;		
@@ -46,6 +46,13 @@ class customer extends CI_Controller {
 
 	public function edit()
 	{			
+		//debug mode
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//调试
@@ -78,6 +85,9 @@ class customer extends CI_Controller {
 	
 	public function blog()
 	{			
+		//debug mode
+		userdata('userrole') = 9;
+		userdata('username') = 'libin';		
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//调试

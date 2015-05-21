@@ -5,14 +5,16 @@ class product extends CI_Controller {
 	public function __construct()
 	{
 	  	parent::__construct();
-		$this->load->helper ( array (
-			'form',
-			'url' 
-		) );
-		$this->load->library('session');
 	}
 	public function index()
 	{
+		//debug mode
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);		
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//ต๗สิ
@@ -45,6 +47,13 @@ class product extends CI_Controller {
 
 	public function add()
 	{			
+		//debug mode
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//ต๗สิ

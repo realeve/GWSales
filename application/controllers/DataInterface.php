@@ -5,11 +5,6 @@ class DataInterface extends CI_Controller {
 	public function __construct()
 	{
 	  	parent::__construct();
-		$this->load->helper ( array (
-			'form',
-			'url' 
-		) );
-		$this->load->library('session');
 		$this->load->model('DataInterfaceModel');
 	}
 
@@ -17,8 +12,6 @@ class DataInterface extends CI_Controller {
 	{
 		if ($this->session->userdata('userrole')>0)
 		{
-			//$this->output->set_output($logindata);//调试
-			//$this->session->sess_destroy();//注销
 			if($this->session->userdata('logged_in')==true)
 			{
 				$logindata['logged_in'] = true;		

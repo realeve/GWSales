@@ -5,17 +5,19 @@ class Welcome extends CI_Controller {
 	public function __construct()
 	{
 	  	parent::__construct();
-		$this->load->helper ( array (
-			'form',
-			'url' 
-		) );
-		$this->load->library('session');
 		$this->load->model('LoginModel');
 	}
 
 	public function index()
 	{
-		//$this->output->set_output(json_encode($this->session->userdata));//调试
+		//debug mode
+		$logindata = array(
+                   'username'  => 'libin',
+                   'userrole'     => '9',
+                   'logged_in' => TRUE
+               );
+		$this->session->set_userdata($logindata);
+		
 		if ($this->session->userdata('userrole')>0)
 		{
 			//$this->output->set_output($logindata);//调试
