@@ -59,8 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | the query builder class.
 */
 
-//$active_group = 'default';
-$active_group = 'sqlsvr';
+$active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
@@ -84,35 +83,3 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
-
-$db['sqlsvr']['hostname'] = 'localhost';
-$db['sqlsvr']['username'] = 'sa';
-$db['sqlsvr']['password'] = '123';
-$db['sqlsvr']['database'] = 'QuaCenter';
-$db['sqlsvr']['dbdriver'] = 'mssql';
-$db['sqlsvr']['dbprefix'] = '';
-$db['sqlsvr']['pconnect'] = TRUE;
-$db['sqlsvr']['db_debug'] = TRUE;
-$db['sqlsvr']['cache_on'] = FALSE;
-$db['sqlsvr']['cachedir'] = '';
-$db['sqlsvr']['char_set'] = 'utf8';
-$db['sqlsvr']['dbcollat'] = 'utf8_general_ci';
-$db['sqlsvr']['swap_pre'] = '';
-$db['sqlsvr']['autoinit'] = TRUE;
-$db['sqlsvr']['stricton'] = FALSE;
-
-$db['Quality']['hostname'] = 'localhost';
-$db['Quality']['username'] = 'sa';
-$db['Quality']['password'] = '123';
-$db['Quality']['database'] = 'NotaCheck_DB';
-$db['Quality']['dbdriver'] = 'mssql';
-$db['Quality']['dbprefix'] = '';
-$db['Quality']['pconnect'] = TRUE;
-$db['Quality']['db_debug'] = TRUE;
-$db['Quality']['cache_on'] = FALSE;
-$db['Quality']['cachedir'] = '';
-$db['Quality']['char_set'] = 'utf8';
-$db['Quality']['dbcollat'] = 'utf8_general_ci';
-$db['Quality']['swap_pre'] = '';
-$db['Quality']['autoinit'] = TRUE;
-$db['Quality']['stricton'] = FALSE;

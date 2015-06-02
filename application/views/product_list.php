@@ -33,20 +33,18 @@ License: You must have a valid license purchased only from themeforest(the above
     <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
 
-    <!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="<?php echo base_url();?>assets/global/plugins/select2/select2.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
-    <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
-    <!-- END PAGE LEVEL STYLES -->
+	<!-- BEGIN PAGE LEVEL STYLES -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/select2/select2.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/bootstrap-datepicker/css/datepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/global/plugins/fancybox/source/jquery.fancybox.css" />
+	<!-- END PAGE LEVEL STYLES -->
 
-    <!-- BEGIN PAGE STYLES -->
-    <link href="<?php echo base_url();?>assets/admin/pages/css/profile.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo base_url();?>assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
-    <link href="<?php echo base_url()?>assets/admin/pages/css/timeline.css" rel="stylesheet" type="text/css"/>
-    <!-- END PAGE STYLES -->
+	<!-- BEGIN PAGE STYLES -->
+	<link href="<?php echo base_url();?>assets/admin/pages/css/portfolio.css" rel="stylesheet" type="text/css"/>
+	<!-- END PAGE STYLES -->
 
     <!-- BEGIN THEME STYLES -->
     <link href="<?php echo base_url();?>assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
@@ -75,7 +73,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="page-header-inner">
         <!-- BEGIN LOGO -->
         <div class="page-logo">
-            <a href="<?php echo site_url('main'); ?>">
+            <a href="<php echo site_url('main');>">
                 <img src="<?php echo base_url();?>assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
             </a>
             <div class="menu-toggler sidebar-toggler hide">
@@ -193,7 +191,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="<?php echo site_url('order')?>">
+                            <a href="<?php echo site_url('order/index')?>">
                                 <i class="icon-magnifier"></i>
                                 订单浏览</a>
                         </li>
@@ -209,15 +207,16 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="active open">
                     <a href="javascript:;">
                         <i class="icon-handbag"></i>
                         <span class="title">产品管理</span>
-                        <span class="arrow "></span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
                     </a>
                     <ul class="sub-menu">
-                        <li>
-                            <a href="<?php echo site_url('product')?>">
+                        <li class="active">
+                            <a href="<?php echo site_url('product/index')?>">
                                 <i class="icon-list"></i>
                                 产品列表</a>
                         </li>
@@ -228,20 +227,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         </li>
                     </ul>
                 </li>
-                <li class="active open">
+                <li>
                     <a href="javascript:;">
                         <i class="icon-diamond"></i>
                         <span class="title">客户管理</span>
-                        <span class="selected"></span>
-                        <span class="arrow open"></span>
+                        <span class="arrow "></span>
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="<?php echo site_url('customer')?>">
+                            <a href="<?php echo site_url('customer/index')?>">
                                 <i class="icon-grid"></i>
                                 <span class="badge badge-roundless badge-success">new</span>信息浏览</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="<?php echo site_url('customer/edit')?>">
                                 <i class="icon-note"></i>
                                 <span class="badge badge-roundless badge-danger">new</span>信息维护</a>
@@ -456,21 +454,21 @@ License: You must have a valid license purchased only from themeforest(the above
 
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			信息编辑
+			产品列表
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="<?php echo base_url('main');?>">主页</a>
+						<a href="<?php echo base_url()?>">主页</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="javascript:;">客户管理</a>
+						<a href="javascript:;">产品管理</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="<?php echo base_url('customer/edit');?>">信息编辑</a>
+						<a href="<?php echo base_url()?>product">产品列表</a>
 					</li>
 				</ul>
 				<div class="page-toolbar">
@@ -480,314 +478,572 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 			</div>
 			<!-- END PAGE HEADER-->
-			<!-- BEGIN PAGE CONTENT-->
-			<div class="row margin-top-20">
+			<!-- BEGIN CONTENT -->
+			<div class="row">
 				<div class="col-md-12">
-					<!-- BEGIN PROFILE SIDEBAR -->
-					<div class="profile-sidebar">
-						<!-- PORTLET MAIN -->
-						<div class="portlet light profile-sidebar-portlet">
-							<!-- SIDEBAR USERPIC -->
-							<div class="profile-userpic">
-								<img src="<?php echo base_url();?>assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
-							</div>
-							<!-- END SIDEBAR USERPIC -->
-							<!-- SIDEBAR USER TITLE -->
-							<div class="profile-usertitle">
-								<div class="profile-usertitle-name">
-									 张三
-								</div>
-								<div class="profile-usertitle-job">
-									 销售经理
-								</div>
-								<div class="profile-usertitle-job">
-									 中国建设银行 四川省分行
-								</div>
-							</div>
-							<!-- END SIDEBAR USER TITLE -->
-							<!-- SIDEBAR BUTTONS -->
-							<div class="profile-userbuttons">
-								<button type="button" class="btn btn-circle green-haze btn-sm">关注</button>
-								<button type="button" class="btn btn-circle btn-danger btn-sm">信息</button>
-							</div>
-							<!-- END SIDEBAR BUTTONS -->
-							<!-- SIDEBAR MENU -->
-							<div class="profile-usermenu">
-								<ul class="nav">
-									<li class="active">
-										<a href="./">
-										<i class="icon-home"></i>
-										概述 </a>
-									</li>
-									<li>
-										<a href="javascript:;">
-										<i class="icon-settings"></i>
-										帐户设置 </a>
-									</li>
-									<li>
-										<a href="customer/task" target="_blank">
-										<i class="icon-check"></i>
-										任务 </a>
-									</li>
-									<li>
-										<a href="customer/help">
-										<i class="icon-info"></i>
-										帮助 </a>
-									</li>
-								</ul>
-							</div>
-							<!-- END MENU -->
+					<div class="portlet light bordered">			
+						<div class="portlet-title tabbable-line">
+							<ul class="nav nav-tabs pull-left">
+								<li class="active">
+									<a href="#tab_1" data-toggle="tab">
+									四列样式</a>
+								</li>
+								<li>
+									<a href="#tab_2" data-toggle="tab">
+									三列样式</a>
+								</li>
+								<li>
+									<a href="#tab_3" data-toggle="tab">
+									<i class="icon-settings"></i>&nbsp;查询选项</a>
+								</li>
+							</ul>	
+							<div class="actions">		
+								<!--a href="javascript:;" class="btn btn-circle btn-default">
+									<i class="fa fa-plus"></i> 新建 </a-->
+								<div class="portlet-input input-inline input-medium">
+									<div class="input-group">
+										<input type="text" class="form-control input-circle-left" placeholder="请输入产品名...">
+										<span class="input-group-btn">
+										<button class="btn btn-circle-right btn-default" type="submit">搜索</button>
+										</span>
+									</div>
+								</div>				
+								<a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;">
+								</a>
+							</div>						
 						</div>
-						<!-- END PORTLET MAIN -->
-						<!-- PORTLET MAIN -->
-						<div class="portlet light">
-							<!-- STAT -->
-							<div class="row list-separated profile-stat">
-								<div class="col-md-4 col-sm-4 col-xs-6">
-									<div class="uppercase profile-stat-title">
-										 37
-									</div>
-									<div class="uppercase profile-stat-text">
-										 已结算
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-6">
-									<div class="uppercase profile-stat-title">
-										 51
-									</div>
-									<div class="uppercase profile-stat-text">
-										 未结算
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-4 col-xs-6">
-									<div class="uppercase profile-stat-title">
-										 12
-									</div>
-									<div class="uppercase profile-stat-text">
-										 申请中
-									</div>
-								</div>
-							</div>
-							<!-- END STAT -->
-							<div>
-								<h4 class="profile-desc-title">关于 张三</h4>
-								<span class="profile-desc-text"> 中国建设银行 四川省分行销售经理 负责XX大区的XX销售事务. </span>
-								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-globe"></i>
-									<a href="http://www.cbpm.com">www.cbpc.com</a>
-								</div>
-								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-weibo"></i>
-									<a href="http://www.weibo.com/realeve/">@realeve</a>
-								</div>
-								<div class="margin-top-20 profile-desc-link">
-									<i class="fa fa-qq"></i>
-									<a href="javascript:;">realeve@qq.com</a>
-								</div>
-							</div>
-						</div>
-						<!-- END PORTLET MAIN -->
-					</div>
-					<!-- END BEGIN PROFILE SIDEBAR -->
-					<!-- BEGIN PROFILE CONTENT -->
-					<div class="profile-content">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="portlet light">
-									<div class="portlet-title tabbable-line">
-										<div class="caption caption-md">
-											<i class="icon-globe theme-font hide"></i>
-											<span class="caption-subject font-blue-madison bold uppercase">帐户资料</span>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_1">
+								<!-- BEGIN FILTER -->
+								<div class="margin-top-10">
+									<ul class="mix-filter">
+										<li class="filter" data-filter="all">
+											 全部
+										</li>
+										<li class="filter" data-filter="category_1 category_2">
+											 金制品
+										</li>
+										<li class="filter" data-filter="category_3 category_4">
+											 银制品
+										</li>
+										<li class="filter" data-filter="category_5">
+											 其它
+										</li>
+										<li class="filter" data-filter="category_1">
+											 投资金
+										</li>
+										<li class="filter" data-filter="category_2">
+											 工业金
+										</li>
+										<li class="filter" data-filter="category_3">
+											 投资银
+										</li>
+										<li class="filter" data-filter="category_4">
+											 工业银
+										</li>										
+									</ul>
+									<div class="row mix-grid">
+										<div class="col-md-3 col-sm-4 mix category_1">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
 										</div>
-										<ul class="nav nav-tabs">
-											<li class="active">
-												<a href="#tab_1_1" data-toggle="tab">个人信息</a>
-											</li>
-											<li>
-												<a href="#tab_1_2" data-toggle="tab">更换头像</a>
-											</li>
-											<li>
-												<a href="#tab_1_3" data-toggle="tab">更改密码</a>
-											</li>
-											<li>
-												<a href="#tab_1_4" data-toggle="tab">权限设置</a>
-											</li>
-										</ul>
-									</div>
-									<div class="portlet-body">
-										<div class="tab-content">
-											<!-- PERSONAL INFO TAB -->
-											<div class="tab-pane active" id="tab_1_1">
-												<form role="form" action="#">
-													<div class="form-group">
-														<label class="control-label">姓</label>
-														<input type="text" placeholder="王" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">名</label>
-														<input type="text" placeholder="宝强" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">移动电话</label>
-														<input type="text" placeholder="186-028-12345" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">工作电话</label>
-														<input type="text" placeholder="028-8275-0000" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">职务</label>
-														<input type="text" placeholder="中国建设银行 四川省分行 销售经理" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">说明</label>
-														<textarea class="form-control" rows="3" placeholder="Don't forget your dreams!!!"></textarea>
-													</div>
-													<div class="form-group">
-														<label class="control-label">网址</label>
-														<input type="text" placeholder="http://www.cbpc.com" class="form-control"/>
-													</div>
-													<div class="margiv-top-10">
-														<a href="javascript:;" class="btn green-haze">
-														保存设置 </a>
-														<a href="javascript:;" class="btn default">
-														取消 </a>
-													</div>
-												</form>
+										<div class="col-md-3 col-sm-4 mix category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
 											</div>
-											<!-- END PERSONAL INFO TAB -->
-											<!-- CHANGE AVATAR TAB -->
-											<div class="tab-pane" id="tab_1_2">
-												<p>
-													 只支持JPG、PNG、GIF，大小不超过5M.
-												</p>
-												<form action="#" role="form">
-													<div class="form-group">
-														<div class="fileinput fileinput-new" data-provides="fileinput">
-															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-																<img src="<?php echo base_url();?>assets/admin/pages/media/profile/Avatar_none.gif" alt=""/>
-															</div>
-															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
-															</div>
-															<div>
-																<span class="btn default btn-file">
-																<span class="fileinput-new">
-																选择图像 </span>
-																<span class="fileinput-exists">
-																更换图像 </span>
-																<input type="file" name="...">
-																</span>
-																<a href="javascript:;" class="btn default fileinput-exists" data-dismiss="fileinput">
-																移除 </a>
-															</div>
-														</div>
-														<div class="clearfix margin-top-10">
-															<span class="label label-danger">注意! </span>
-															<span style="padding-left:1em;">仅在最新版的 Firefox, Chrome, Opera, Safari and Internet Explorer 10 浏览器中支持缩略图显示功能 </span>
-														</div>
-													</div>
-													<div class="margin-top-10">
-														<a href="javascript:;" class="btn green-haze">
-														提交 </a>
-														<a href="javascript:;" class="btn default">
-														取消 </a>
-													</div>
-												</form>
+										</div>
+										<div class="col-md-3 col-sm-4 mix">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
 											</div>
-											<!-- END CHANGE AVATAR TAB -->
-											<!-- CHANGE PASSWORD TAB -->
-											<div class="tab-pane" id="tab_1_3">
-												<form action="#">
-													<div class="form-group">
-														<label class="control-label">当前密码</label>
-														<input type="password" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">新密码</label>
-														<input type="password" class="form-control"/>
-													</div>
-													<div class="form-group">
-														<label class="control-label">重试新密码</label>
-														<input type="password" class="form-control"/>
-													</div>
-													<div class="margin-top-10">
-														<a href="javascript:;" class="btn green-haze">
-														更新密码 </a>
-														<a href="javascript:;" class="btn default">
-														取消 </a>
-													</div>
-												</form>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_1 category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
 											</div>
-											<!-- END CHANGE PASSWORD TAB -->
-											<!-- PRIVACY SETTINGS TAB -->
-											<div class="tab-pane" id="tab_1_4">
-												<form action="#">
-													<table class="table table-light table-hover">
-													<tr>
-														<td>
-															 描述1 ..
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="radio" name="optionsRadios1" value="option1"/>
-															是 </label>
-															<label class="uniform-inline">
-															<input type="radio" name="optionsRadios1" value="option2" checked/>
-															否 </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 描述2
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> 是 </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 描述3
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> 是 </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 描述4
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> 是 </label>
-														</td>
-													</tr>
-													</table>
-													<!--end profile-settings-->
-													<div class="margin-top-10">
-														<a href="javascript:;" class="btn green-haze">
-														更新设置 </a>
-														<a href="javascript:;" class="btn default">
-														取消 </a>
-													</div>
-												</form>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_5">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img5.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img5.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
 											</div>
-											<!-- END PRIVACY SETTINGS TAB -->
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_5">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img6.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img6.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_1 category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_3">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img7.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_4">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img8.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-4 mix category_4">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img9.jpg" alt="">
+												<div class="mix-details">
+													<h4>商品名:名字</br>商品介绍:一些介绍</h4>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
+								<!-- END FILTER -->
+							</div>
+							<div class="tab-pane" id="tab_2">
+								<!-- BEGIN FILTER -->
+								<div class="filter-v1 margin-top-10">
+									<ul class="mix-filter">
+										<li class="filter" data-filter="all">
+											 全部
+										</li>
+										<li class="filter" data-filter="category_1 category_2">
+											 金制品
+										</li>
+										<li class="filter" data-filter="category_3 category_4">
+											 银制品
+										</li>
+										<li class="filter" data-filter="category_5">
+											 其它
+										</li>
+										<li class="filter" data-filter="category_1">
+											 投资金
+										</li>
+										<li class="filter" data-filter="category_2">
+											 工业金
+										</li>
+										<li class="filter" data-filter="category_3">
+											 投资银
+										</li>
+										<li class="filter" data-filter="category_4">
+											 工业银
+										</li>	
+									</ul>
+									<div class="row mix-grid thumbnails">
+										<div class="col-md-4 col-sm-6 mix category_1 category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_1 category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_5">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img5.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img5.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_5">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img6.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img6.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_2 category_1">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img1.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_1 category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img2.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_2">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img4.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_1">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_3">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img7.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_4">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img8.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 col-sm-6 mix category_4">
+											<div class="mix-inner">
+												<img class="img-responsive" src="<?php echo base_url();?>assets/admin/pages/media/products/img9.jpg" alt="">
+												<div class="mix-details">
+													<h3>Cascusamus et iusto odio</h3>
+													<p>
+														 At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum.
+													</p>
+													<a class="mix-link">
+													<i class="fa fa-link"></i>
+													</a>
+													<a class="mix-preview fancybox-button" href="<?php echo base_url();?>assets/admin/pages/media/products/img3.jpg" title="Project Name" data-rel="fancybox-button">
+													<i class="fa fa-search"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END FILTER -->
+							</div>
+							<div class="tab-pane" id="tab_3">
+								<div class="scroller form-body" style="height: 700px;">
+									<!--/row-->
+									<h4 class="form-section font-blue-hoki">1.人员</h4>
+
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">i.客户</label>									
+												<select class="select2_category bs-select form-control select2me"  data-placeholder="请选择客户名...">
+													<option value=""></option>												
+													<option value="1">客户A</option>
+													<option value="2" selected>客户B</option>																					
+												</select>
+											</div>
+										</div>
+										<!--/span-->
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">ii.营销员</label>									
+												<select class="select2_category bs-select form-control select2me"  data-placeholder="请选择营销人员...">
+													<option value=""></option>
+													<optgroup label="建行">
+														<option value="1">张三</option>
+														<option value="2">张四</option>
+														<option value="3">张五</option>
+														<option value="4">张六</option>
+													</optgroup>
+													<optgroup label="工行">
+														<option value="6">张七</option>
+														<option value="7">张八</option>
+														<option value="8">张九</option>
+													</optgroup>
+												</select>
+												<span class="help-block">
+												(选择营销人员)</span>
+											</div>
+										</div>
+										<!--/span-->
+									</div>							
+
+									<h4 class="form-section font-blue-hoki">2.状态</h4>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">i.物流</label>									
+												<select class="select2_category bs-select form-control select2me"  data-placeholder="请选择物流状态..">
+													<option value=""></option>												
+													<option value="1">未发货</option>
+													<option value="2">已发货</option>		
+													<option value="3" selected>已签收</option>																					
+												</select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">ii.资金流</label>									
+												<select class="select2_category bs-select form-control select2me"  data-placeholder="请选择资金状态..">
+													<option value=""></option>	
+													<option value="1">未付款</option>
+													<option value="2">已付款</option>																															
+												</select>
+											</div>
+										</div>
+									
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">iii.信息流</label>									
+												<select class="select2_category bs-select form-control select2me"  data-placeholder="请选择订单状态..">
+													<option value="1" selected>未审批</option>		
+													<option value="2">已审批</option>																	
+												</select>
+											</div>
+										</div>									
+									</div>
+									<div class="form-actions pull-right">
+										<button class="btn btn-success btn-circle green"><i class="icon-magnifier"></i>查询数据</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- END PROFILE CONTENT -->
 				</div>
 			</div>
 			<!-- END PAGE CONTENT-->
-		</div>
-	</div>
-	<!-- END CONTENT -->
-
+        </div>
+    </div>
+    <!-- END CONTENT -->
 </div>
 
 <!-- BEGIN QUICK SIDEBAR -->
@@ -1257,19 +1513,19 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
-    <div class="page-footer-inner">
-        2015 &copy; 中钞长城贵金属有限公司.
-    </div>
-    <div class="scroll-to-top">
-        <i class="icon-arrow-up"></i>
-    </div>
+	<div class="page-footer-inner">
+		 2015 &copy; 中钞长城贵金属有限公司.
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
 </div>
 <!-- END FOOTER -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
 <script src="<?php echo base_url();?>assets/global/plugins/respond.min.js"></script>
-<script src="<?php echo base_url();?>assets/global/plugins/excanvas.min.js"></script>
+<script src="<?php echo base_url();?>assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
 <script src="<?php echo base_url();?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
@@ -1284,7 +1540,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="<?php echo base_url();?>assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <?php
-function today($type){
+  function today($type){
     date_default_timezone_set ("Asia/Chongqing");
     $a=date("Y");
     $b=date("m");
@@ -1295,29 +1551,29 @@ function today($type){
     $output;
     switch($type)
     {
-        case 0:
-            $output = $a.'年'.$b.'月'.$c.'日';
-            break;
-        case 1:
-            $output = $a.'-'.$b.'-'.$c.'  '.$d.':'.$e.':'.$f;
-            break;
-        case 2:
-            $output = $a.'年'.$b.'月'.$c.'日'.$d.'时'.$e.'分'.$f.'秒';
-            break;
-        case 3:
-            $output = $a.'-'.$b.'-'.$c.'  '.$d.':'.$e;
-            break;
-        case 4:
-            $output = $a.'年'.$b.'月'.$c.'日  '.$d.'时'.$e.'分';
-            break;
-        case 5:
-            $output = $a.'年'.$b.'月'.$c.'日  '.$d.':'.$e;
-            break;
-        case 6:
-            $output = $a.'年'.$b.'月';
-            break;
+      case 0:
+        $output = $a.'年'.$b.'月'.$c.'日';
+        break;
+      case 1:
+        $output = $a.'-'.$b.'-'.$c.'  '.$d.':'.$e.':'.$f;
+        break;
+      case 2:
+        $output = $a.'年'.$b.'月'.$c.'日'.$d.'时'.$e.'分'.$f.'秒';
+        break;
+      case 3:
+        $output = $a.'-'.$b.'-'.$c.'  '.$d.':'.$e;
+        break;
+      case 4:
+        $output = $a.'年'.$b.'月'.$c.'日  '.$d.'时'.$e.'分';
+        break;
+	  case 5:
+        $output = $a.'年'.$b.'月'.$c.'日  '.$d.':'.$e;
+        break;
+	  case 6:
+        $output = $a.'年'.$b.'月';
+        break;
     };
-    return $output;
+  return $output;
 }
 ?>
 
@@ -1326,38 +1582,54 @@ function today($type){
 <script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/jquery.sparkline.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/jquery-mixitup/jquery.mixitup.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-select/bootstrap-select.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-daterangepicker/moment.min.js" ></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js"</script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" ></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.js" ></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/global/plugins/plupload/js/plupload.full.min.js" ></script>
+<script src="<?php echo base_url();?>assets/admin/pages/controller/CommonFunctions.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script type="text/javascript" src="<?php echo base_url();?>assets/global/scripts/metronic.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/admin/layout/scripts/layout.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/admin/layout/scripts/quick-sidebar.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/admin/layout/scripts/demo.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/admin/pages/scripts/profile.js"></script>
-
-<script src="<?php echo base_url();?>assets/admin/pages/controller/CommonFunctions.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>assets/admin/pages/controller/MicroBlog.js"></script>
+<script src="<?php echo base_url();?>assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>assets/admin/pages/scripts/ecommerce-products-edit.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <script>
-    jQuery(document).ready(function() {
-        // initiate layout and plugins
-        Metronic.init(); // init metronic core components
-        Layout.init(); // init current layout
-        QuickSidebar.init(); // init quick sidebar
-        Demo.init(); // init demo features
-        $("#today").text('<?php echo today(5);?>');
-        initDashboardDaterange('YYYY-MM-DD');
-        ReadLogSettings();
-        //客户浏览
-        Profile.init(); // init page demo
-    });
+jQuery(document).ready(function() {       
+   // initiate layout and plugins
+	Metronic.init(); // init metronic core components
+	Layout.init(); // init current layout
+	QuickSidebar.init(); // init quick sidebar
+	Demo.init(); // init demo features
+   //ComponentsDropdowns.init();	
+	$("#today").text('<?php echo today(5);?>');
+	$("#saleDate").val('<?php echo today(6);?>');
+	initDashboardDaterange('YYYY-MM-DD');   
+	//产品列表
+	var Product = function () {
+		return {
+			//main function to initiate the module
+			init: function () {
+			   $('.mix-grid').mixitup();
+			}
+		};		
+	}();	
+	Product.init();
+	
+	//产品添加
+	EcommerceProductsEdit.init();
+});
 </script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->
