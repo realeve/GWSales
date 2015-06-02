@@ -17,6 +17,14 @@
 /*2015-05-19
     +TABLE      gw_stock                                库存表
     +TABLE      gw_stock_detail                         库存明细表
+/*2015-06-02
+	+FIELD		gw_customer			is_del				删除标识
+	+FIELD		gw_order			is_del				删除标识
+	+FIELD		gw_goods			is_del				删除标识
+	-FIELD		gw_goods			goods_img			建立商品图片表，删除该字段
+	-FIELD		gw_goods            goods_thumb			建立商品图片表，删除该字段
+	+TABLE      gw_goods_imgs 							商品图片表
+	+TABLE      gw_order_logs							订单日志表
 	
 /*------------------------------------版本说明 end---------------------------------------*/
 #创建数据库
@@ -69,7 +77,8 @@ CREATE TABLE IF NOT	EXISTS gw_customer(
 	corporate varchar(50) not null default '' comment '法人代表',
 	contact varchar(50) not null default '' comment '联系人',
 	contact_tel varchar(50) not null default '' comment '联系电话',	
-	channel_id tinyint unsigned not null default 0 comment '渠道类别，默认为0，0为集团，1为个人'
+	channel_id tinyint unsigned not null default 0 comment '渠道类别，默认为0，0为集团，1为个人',
+	is_del tinyint unsigned not null default 0 comment '删除标识，默认为0，0为未删除，1为已删除'
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='客户表';
 
 #创建客户收货地址表
@@ -114,6 +123,7 @@ CREATE TABLE IF NOT	EXISTS gw_order(
 	order_updatetime int unsigned not null default 0 comment '更新时间',
 	delivery_date int unsigned not null default 0 comment '交货时间',
 	order_principal int unsigned not null default 0 comment '订单负责人',
+	is_del tinyint unsigned not null default 0 comment '删除标识，默认为0，0为未删除，1为已删除',
 	index user_id(user_id),
 	index cus_id(cus_id),		
 	index address_id(address_id)
@@ -130,6 +140,15 @@ CREATE TABLE IF NOT	EXISTS gw_order_goods(
 	sub_weight int unsigned not null default 0 comment '单品重量小计',
 	sub_amount decimal(10,2) not null default 0 comment '单品价格小计'
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='订单明细表';
+
+#创建订单日志表，描述订单状态修改信息
+CREATE TABLE IF NOT EXISTS gw_order_logs(
+	log_id int unsigned not null auto_increment primary key comment '日志编号',
+	order_id int unsigned not null default 0 comment '订单ID',
+	updatetime int unsigned not null default 0 comment '更新时间',
+	user_id int unsigned not null default 0 comment '经办人ID',
+	log varchar(255) not null default '' comment '状态信息说明'
+)ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='订单日志表';
 /*------------------------------------订单模块 end-----------------------------------*/
 
 /*------------------------------------商品模块---------------------------------------*/
@@ -139,7 +158,7 @@ CREATE TABLE IF NOT	EXISTS gw_category(
 	cat_name varchar(30) not null default '' comment '商品类别名称',
 	parent_id smallint unsigned not null default 0 comment '商品类别父ID',
 	cat_desc varchar(255) not null default '' comment '商品类别描述',
-	#	is_show tinyint not null default 1 comment '是否显示，0为不显示，1为显示，默认显示',	
+	#	is_show tinyint not null default 1 comment '是否显示，0为不显示，1为显示，默认1',	
 	index pid(parent_id)
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='商品类别表';
 
@@ -155,9 +174,18 @@ CREATE TABLE IF NOT	EXISTS gw_goods(
 	goods_thumb varchar(50) not null default '' comment '商品缩略图',
 	goods_weight int unsigned not null default 0 comment '商品单位重量',
 	add_time int unsigned not null default 0 comment '添加时间',
+	is_del tinyint unsigned not null default 0 comment '删除标识，默认为0，0为未删除，1为已删除',
 	index cat_id(cat_id)
 )ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='商品表';
 
+#创建商品图片表
+CREATE TABLE IF NOT EXISTS gw_goods_imgs(
+	img_id int unsigned not null auto_increment primary key comment '图片ID',
+	goods_img varchar(50) not null default '' comment '商品图片',
+	goods_id int unsigned not null default 0 comment '商品ID',
+	index goods_id(goods_id)
+)ENGINE=MyISAM DEFAULT CHARSET=UTF8 COMMENT='商品图片表';
+	
 #创建商品价格表
 CREATE TABLE IF NOT	EXISTS gw_price(
 	price_id int unsigned not null auto_increment primary key comment '价格ID',
